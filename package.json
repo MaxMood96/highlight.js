@@ -70,7 +70,7 @@
     "deep-freeze-es6": "^1.4.1",
     "del": "^6.1.1",
     "dependency-resolver": "^2.0.1",
-    "eslint": "^8.17.0",
+    "eslint": "^9.0.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
