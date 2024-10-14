@@ -743,6 +743,11 @@ const HLJS = function(hljs) {
     fire("before:highlightElement",
       { el: element, language });
 
+    if (element.dataset.highlighted) {
+      console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", element);
+      return;
+    }
+
     // we should be all text, no child nodes (unescaped HTML) - this is possibly
     // an HTML injection attack - it's likely too late if this is already in
     // production (the code has likely already done its damage by the time
@@ -769,6 +774,7 @@ const HLJS = function(hljs) {
     const result = language ? highlight(text, { language, ignoreIllegals: true }) : highlightAuto(text);
 
     element.innerHTML = result.value;
+    element.dataset.highlighted = "yes";
     updateClassName(element, language, result.language);
     element.result = {
       language: result.language,
@@ -813,24 +819,23 @@ const HLJS = function(hljs) {
    * auto-highlights all pre>code elements on the page
    */
   function highlightAll() {
+    function boot() {
+      // if a highlight was requested before DOM was loaded, do now
+      highlightAll();
+    }
+
     // if we are called too early in the loading process
     if (document.readyState === "loading") {
+      // make sure the event listener is only added once
+      if (!wantsHighlight) {
+        window.addEventListener('DOMContentLoaded', boot, false);
+      }
       wantsHighlight = true;
       return;
     }
 
     const blocks = document.querySelectorAll(options.cssSelector);
     blocks.forEach(highlightElement);
-  }
-
-  function boot() {
-    // if a highlight was requested before DOM was loaded, do now
-    if (wantsHighlight) highlightAll();
-  }
-
-  // make sure we are in the browser environment
-  if (typeof window !== 'undefined' && window.addEventListener) {
-    window.addEventListener('DOMContentLoaded', boot, false);
   }
 
   /**
