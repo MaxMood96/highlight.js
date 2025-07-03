@@ -34,6 +34,7 @@ The table below shows the full list of languages (and corresponding classes/alia
 | Bash                    | bash, sh, zsh          |         |
 | BASIC                   | basic                  |         |
 | BBCode                  | bbcode                 | [highlightjs-bbcode](https://github.com/RedGuy12/highlightjs-bbcode) |
+| Bicep                   | bicep                  | [highlightjs-bicep](https://github.com/Azure/bicep/blob/main/docs/highlighting.md#highlightjs) |
 | Blade (Laravel)         | blade                  | [highlightjs-blade](https://github.com/miken32/highlightjs-blade) |
 | BNF                     | bnf                    |         |
 | BQN                     | bqn                    | [highlightjs-bqn](https://github.com/razetime/highlightjs-bqn) |
@@ -112,17 +113,16 @@ The table below shows the full list of languages (and corresponding classes/alia
 | Inform7                 | inform7, i7            |         |
 | Ini, TOML               | ini, toml              |         |
 | Iptables                | iptables               | [highlightjs-iptables](https://github.com/highlightjs/highlightjs-iptables) |
-| JSON                    | json, jsonc, json5     |         |
-| JSONata                 | jsonata                | [highlightjs-jsonata](https://github.com/DevDimov/highlightjs-jsonata) |
 | IRPF90                  | irpf90                 |         |
 | Java                    | java, jsp              |         |
 | JavaScript              | javascript, js, jsx    |         |
 | Jolie                   | jolie, iol, ol         | [highlightjs-jolie](https://github.com/xiroV/highlightjs-jolie) |
-| JSON                    | json, jsonc            |         |
+| JSON                    | json, jsonc, json5     |         |
 | JSONata                 | jsonata                | [highlightjs-jsonata](https://github.com/DevDimov/highlightjs-jsonata) |
 | Julia                   | julia, jl               |         |
 | Julia REPL              | julia-repl             |         |
 | Kotlin                  | kotlin, kt             |         |
+| L4                      | l4, legal              | [highlightjs-l4](https://github.com/legalese/highlightjs-l4)
 | Lang                    |                        | [highlightjs-lang](https://github.com/highlightjs/highlightjs-lang)
 | Lasso                   | lasso, ls, lassoscript |         |
 | LaTeX                   | tex                    |         |
