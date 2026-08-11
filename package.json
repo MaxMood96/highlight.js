@@ -83,7 +83,7 @@
     "handlebars": "^4.7.8",
     "http-server": "^14.1.1",
     "jsdom": "^25.0.1",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.23",
     "mocha": "^11.0.1",
     "refa": "^0.4.1",
     "rollup": "^4.0.2",
